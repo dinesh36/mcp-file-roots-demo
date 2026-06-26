@@ -4,9 +4,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Setup
 
-Copy `.env.example` to `.env` and fill in your `ANTHROPIC_API_KEY`. Install dependencies with:
+Copy `.env.example` to `.env` and fill in your `ANTHROPIC_API_KEY`. Python 3.14+ is not supported (dependencies lack pre-built wheels). Pin to 3.13 and install:
 
 ```bash
+uv python pin 3.13
 uv sync
 ```
 

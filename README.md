@@ -4,7 +4,7 @@ MCP Chat is a command-line interface application that enables interactive chat c
 
 ## Prerequisites
 
-- Python 3.10+
+- Python 3.10–3.13 (**Python 3.14+ is not supported** — dependencies lack pre-built wheels for it)
 - Anthropic API Key
 - FFmpeg (for video conversion features)
 
@@ -27,7 +27,7 @@ cp .env.example .env
 2. Edit the `.env` file and set your environment variables:
 
 ```
-CLAUDE_MODEL="claude-sonnet-4-0"  # Or your preferred Claude model
+CLAUDE_MODEL="claude-sonnet-4-6"  # Or your preferred Claude model
 ANTHROPIC_API_KEY=""  # Enter your Anthropic API secret key
 ```
 
@@ -43,9 +43,10 @@ ANTHROPIC_API_KEY=""  # Enter your Anthropic API secret key
 pip install uv
 ```
 
-2. Install dependencies:
+2. Pin Python to a supported version (3.13 recommended) and install dependencies:
 
 ```bash
+uv python pin 3.13
 uv sync
 ```
 
